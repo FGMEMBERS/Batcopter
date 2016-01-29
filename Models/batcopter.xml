@@ -1,0 +1,72 @@
+<PropertyList>
+
+  <path>batcopter.ac</path>
+
+  <nasal>
+    <load>
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+
+    </load>
+
+  </nasal>
+
+  <!-- Main rotor-->
+ <animation>
+    <type>spin</type>
+<object-name>Motor1</object-name>
+ <property>rotors/main/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -0.96943 </x-m>
+      <y-m> 0.00244 </y-m>
+      <z-m>  0.61176 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z>  1 </z>
+    </axis>
+  </animation>
+
+  <!-- Tail Rotor -->
+<animation>
+    <type>spin</type>
+<object-name>Motor2</object-name>
+ <property>rotors/main/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> 5.93428 </x-m>
+      <y-m> 0.00421 </y-m>
+      <z-m>  2.04464 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+<!-- ========== Effects ========= -->
+
+	<effect>
+		<inherits-from>Aircraft/Batcopter/Models/Effects/batcopter</inherits-from>
+		<object-name>Body</object-name>
+		<object-name>Black</object-name>
+		<object-name>Logo</object-name>
+		<object-name>Motor1</object-name>
+		<object-name>Metal</object-name>
+		<object-name>Motor2</object-name>
+		<object-name>Skids</object-name>
+		<object-name>Top</object-name>
+	</effect>
+<effect>
+ <inherits-from>Effects/model-transparent</inherits-from>
+ <object-name>Windows</object-name>
+</effect>
+
+
+   </PropertyList>
+
+
